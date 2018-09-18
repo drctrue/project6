@@ -1,0 +1,522 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: 'cyr2regular';
+  src: url('../fonts/77732692-webfont.woff2') format('woff2'),
+  url('../fonts/77732692-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+}
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 9px;
+  line-height: 11px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  background: #fff;
+  min-width: 320px;
+  color: #000;
+  letter-spacing: 1px;
+}
+a {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+  outline:none;
+}
+a:hover,
+a:active,
+a:focus{
+ color: inherit;
+}
+
+a:hover{
+ text-decoration: none;
+}
+
+a:focus{
+   text-decoration: none;
+   outline:none;
+ }
+img{
+  max-width: 100%;
+  height: auto;
+  border-style: none;
+  vertical-align: top;
+}
+em{
+  font-style: italic;
+}
+strong{
+  font-weight: bold;
+}
+video, iframe, object, embed{ max-width: 100%; }
+form,fieldset{
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+input::-ms-clear {  display: none; width : 0; height: 0; }
+input::-ms-reveal {  display: none; width : 0; height: 0; }
+input,
+textarea,
+button {
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  -webkit-user-select: text !important;
+  user-select: text !important;
+  -webkit-appearance: none;
+  border-radius: 0;
+  outline: none;
+}
+input[type="checkbox"], input[type="radio"] {
+  -webkit-appearance: checkbox;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder{
+  color: #000;
+  font-size:9px;
+  opacity: 1;
+  text-overflow:ellipsis;
+}
+input:-moz-placeholder
+textarea:-moz-placeholder{
+  color: #000;
+  font-size:9px;
+  opacity: 1;
+  text-overflow:ellipsis;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder{
+  color: #000;
+  font-size:9px;
+  opacity: 1;
+  text-overflow:ellipsis;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder{
+  color: #000;
+  font-size:9px;
+  opacity: 1;
+  text-overflow:ellipsis;
+}
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder{
+  opacity: 0;
+}
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder{
+  opacity: 0;
+}
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder{
+  opacity: 0;
+}
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder{
+  opacity: 0;
+}
+
+.wrapper{
+  max-width: 780px;
+  margin: 0 auto;
+}
+.header {
+  position: relative;
+}
+.header .slogan {
+  position: absolute;
+  left: 277px;
+  top: 0;
+  font: 800 24px/29px Arial, Verdana, Helvetica, sans-serif;
+  color: #fff;
+}
+.logo {
+  position: absolute;
+  left: 291px;
+  top: 77px;
+  width: 304px;
+  height: 39px;
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+  background: url("../images/logo.png") no-repeat;
+}
+
+.logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.main-nav {
+  padding: 20px 0 14px;
+  display: flex;
+  position: relative;
+}
+.main-nav:before {
+  content: "";
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url("../images/bg-main.gif");
+}
+.main-nav:after {
+  content: "";
+  width: 100%;
+  height: 14px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: url("../images/bg-main.gif") repeat-x 0 -8px;
+}
+.main-nav .ttl {
+  background: #8095a8;
+  border: solid #2d4758;
+  border-width: 1px 1px 1px 0;
+  border-radius: 0 2px 2px 0;
+  font: 11px/14px cyr2regular, Arial, sans-serif;
+  color: #c3d8f5;
+  padding: 2px 0 1px  8px;
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+.main-nav .ttl span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.main-nav .ttl span:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 116px;
+  height: 14px;
+  background: url("../images/bg-nav.png") no-repeat;
+  margin-left: 9px;
+}
+.main-nav .nav {
+  display: flex;
+}
+.main-nav ul {
+  display: flex;
+  font: 11px/14px cyr2regular, Arial, sans-serif;
+  color: #fff;
+}
+.main-nav ul li {
+  margin-left: 1px;
+}
+.main-nav a {
+  display: flex;
+  align-items: center;
+  background: #8095a8;
+  border: 1px solid #2d4758;
+  border-radius: 1px;
+  height: 100%;
+  padding: 0 6px;
+}
+.main-nav .arrow-holder {
+  margin-left: 1px;
+}
+.main-nav .arrow-holder a {
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+  padding: 0;
+  border-radius: 1px 0 0 1px;
+  width: 22px;
+  border-right: 0;
+  background: #8095a8 url("../images/arrow1.png") no-repeat 50% 50%;
+}
+.content-holder {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  border-bottom: 1px solid #b6c5dd;
+}
+.content-holder:after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  left: 300px;
+  top: 0;
+  background: #b6c5dd;
+}
+.content-holder .main-ttl {
+  background: #fca02a;
+  border-radius: 1px;
+  display: block;
+  padding: 2px 31px 3px 8px;
+  position: relative;
+  font: 11px/14px cyr2regular, Arial, sans-serif;
+  color: #fff;
+}
+.content-holder .main-ttl:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 31px;
+  height: 100%;
+  background: url("../images/arrow2.png") no-repeat 50% 50%;
+}
+.content {
+  width: 480px;
+  overflow: hidden;
+  padding: 0 8px 0 15px;
+}
+.content .data{
+  overflow: hidden;
+  padding-top: 6px;
+  letter-spacing: 2px;
+}
+.content .data .img-holder {
+  float: right;
+  border: 2px solid #2d4758;
+  border-radius: 1px;
+  margin: 12px 0 0 4px;
+}
+.content .data h1 {
+  font-weight: bold;
+  font-size: 10px;
+}
+.content .data h2 {
+  font-weight: normal;
+  font-size: 9px;
+}
+.main .box {
+  overflow: hidden;
+  padding: 7px 21px 8px 30px;
+  border-bottom: 1px solid #b6c5dd;
+  position: relative;
+}
+.main .box-ttl {
+  position: absolute;
+  left: 11px;
+  bottom: -11px;
+  background: #fca02a;
+  border-radius: 1px;
+  padding: 2px 24px 3px 23px;
+  text-align: center;
+  font: 11px/14px cyr2regular, Arial, sans-serif;
+  color: #fff;
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
+}
+.main .box .img-holder {
+  float: left;
+  margin: 8px 28px 3px 16px;
+}
+.main .box .data {
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 2px;
+  padding-top: 6px;
+}
+.main .box h3 {
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+}
+.main .box p {
+  margin: 0 0 12px;
+}
+.main .box-ttl:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 100%;
+  background: url("../images/arrow4.png") no-repeat 50% 50%;
+}
+.aside {
+  width: 300px;
+  padding: 0 14px 0 9px;
+}
+.login-form {
+  padding: 9px 2px 12px 8px;
+}
+.login-form .form-ttl {
+  display: block;
+  color: #2d4758;
+  padding-bottom: 12px;
+}
+.login-form .row {
+  font-size: 0;
+  line-height: 0;
+  margin-bottom: 9px;
+}
+.login-form label {
+  display: inline-block;
+  vertical-align: middle;
+  width: 114px;
+  padding: 0 7px;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 14px;
+  color: #11171e;
+}
+.login-form .input-holder {
+  display: inline-block;
+  vertical-align: middle;
+  width: 152px;
+}
+.login-form .input-holder input {
+  width: 100%;
+  padding: 2px 5px;
+  margin: 0;
+  background: #c2d2ea;
+  border: 1px solid #2d4758;
+}
+.login-form .btn-holder {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: -4px 0 21px;
+}
+.login-form .btn-submit {
+  text-align: center;
+  padding: 1px 13px 2px;
+  margin: 0;
+  background: #8095a8;
+  border: 1px solid #2d4758;
+  border-radius: 1px;
+  color: #fff;
+  font: 11px/14px cyr2regular, Arial, sans-serif;
+  position: relative;
+  cursor: pointer;
+}
+.login-form .btn-submit:before,
+.login-form .btn-submit:after{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 13px;
+  height: 100%;
+  background: url("../images/arrow3.gif") no-repeat 50% 50%;
+}
+.login-form .btn-submit:after {
+  left: auto;
+  right: 0;
+}
+.login-form .link-holder {
+  text-align: center;
+  color: #2d4758;
+}
+.login-form .link-holder a {
+  text-decoration: underline;
+}
+.login-form .link-holder a:hover {
+  text-decoration: none;
+}
+.aside .data-box {
+  margin: 0 -2px;
+}
+.aside .data-box section {
+  margin: 3px 0 11px;
+  background: #fca02a;
+  border: 2px solid #2d4758;
+  border-radius: 11px;
+  color: #fff;
+  padding: 9px 3px 7px 9px;
+  text-align: justify;
+}
+.aside .data-box .link-holder {
+  text-align: center;
+  color: #2d4758;
+}
+.aside .data-box .link-holder a {
+  text-decoration: underline;
+}
+.aside .data-box .link-holder a:hover {
+  text-decoration: none;
+}
+.footer {
+  position: relative;
+  padding: 11px 0 9px;
+}
+.footer:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 11px;
+  background: url("../images/bg-main.gif") repeat-x;
+}
+.footer-holder {
+  background: #8095a8;
+  border: solid #2d4758;
+  border-width: 1px 0;
+  font-size: 11px;
+  line-height: 14px;
+  color: #fff;
+  padding: 1px 6px 2px;
+}
+
+
+.login-form .input-holder textarea {
+    width: 100%;
+    padding: 2px 5px;
+    margin: 0;
+    background: #c2d2ea;
+    border: 1px solid #2d4758;
+}
