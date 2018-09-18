@@ -511,8 +511,6 @@ textarea:focus:-ms-input-placeholder{
   color: #fff;
   padding: 1px 6px 2px;
 }
-
-
 .login-form .input-holder textarea {
     width: 100%;
     padding: 2px 5px;
