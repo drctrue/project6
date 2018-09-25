@@ -16,6 +16,8 @@ function config($key = '') {
       'support' => 'Support',
       'contact' => 'Contact',
       'sign_up' => 'Sign up',
+      'elephant' => 'Run baby!',
+      'redirect' => 'Redirect',
     ],
     'template_path' => 'template',
     'content_path' => 'pages',

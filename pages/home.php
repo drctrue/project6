@@ -3,7 +3,7 @@
     <div class="content">
       <strong class="main-ttl">info</strong>
       <div class="data">
-        <div class="img-holder"><img src="images/img1.jpg" width="267" height="200" alt="image" title="image"></div>
+        <div class="img-holder"><img src="html/images/img1.jpg" width="267" height="200" alt="image" title="image"></div>
         <h1>Database Applications</h1>
         <h2>MySQL/PHP</h2>
         <p>Many Web developers like
@@ -68,7 +68,7 @@
   </div>
   <div class="box">
     <strong class="box-ttl">last news</strong>
-    <div class="img-holder"><img src="images/img2.jpg" width="147" height="100" alt="image" title="image"></div>
+    <div class="img-holder"><img src="html/images/img2.jpg" width="147" height="100" alt="image" title="image"></div>
     <div class="data">
       <h3>Sept 4 2002</h3>
       <p>ProHosting releases new and improved Web site, and Account
