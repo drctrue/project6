@@ -41,29 +41,21 @@
     var errors = [];
     if(login.indexOf(' ') > 0) {
       errors.push('Логин не должен содержать пробелы.');
-      // document.getElementById('alert1').innerText = 'Логин не должен содержать пробелы.';
-      // return false;
     }
     if(login.length < 4) {
-      // document.getElementById('alert1').innerText = 'Логин не должен быть короче 4х символов.';
       errors.push('Логин не должен быть короче 4х символов.');
-      // return false;
     }
     if(password.length < 4) {
-      // document.getElementById('alert2').innerText = 'Пароль не должен быть короче 4х символов.';
       errors.push('Пароль не должен быть короче 4х символов.');
-      // return false;
     }
     if(password !== password2) {
-      // document.getElementById('alert2').innerText = 'Пароли не совпадают.';
       errors.push('Пароли не совпадают.');
-      // return false;
     }
     if(errors.length > 0) {
       alerts.innerHTML = '';
       errors.forEach(function (error) {
           alerts.innerHTML = alerts.innerHTML + error + '<br/>';
-      })
+      });
       return false;
     }
   }
