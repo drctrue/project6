@@ -1,14 +1,20 @@
+<style>
+    table, th, td {
+        border: 1px solid black;
+        padding: 10px;
+        margin-top: 20px;
+    }
+    thead {
+        background-color: antiquewhite;
+    }
+</style>
+
 <div class="row">
     <form action="" method="POST" enctype="multipart/form-data">
         Send this file:
         <input name="userfile" type="file">
         <input type="submit" name="send_file" value="Send File">
     </form>
-</div>
-<div class="row">
-    <ul>
-        <li></li>
-    </ul>
 </div>
 
 
@@ -25,6 +31,38 @@ if (isset($_FILES['userfile'])) {
     }
 }
 
-$directory = 'uploads/';
+$directory = './uploads/';
 $scanned_directory = array_diff(scandir($directory), array('..', '.'));
-print_r($scanned_directory);
+
+?>
+
+<div class="row">
+    <table>
+        <thead>
+            <tr>
+                <th>Filename</th>
+                <th>Extension</th>
+                <th>Size</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php
+            foreach ($scanned_directory as $file) {
+                $info = pathinfo($file);
+                $name = $info['basename'];
+                $fullpath = $directory . $name;
+                $extension = $info['extension'];
+                $size = filesize($fullpath);
+                $time = date("m.d.y", filectime($fullpath));
+                ?>
+            <tr>
+                <td><?php echo $name; ?></td>
+                <td><?php echo $extension . ' bytes'; ?></td>
+                <td><?php echo $size; ?></td>
+                <td><?php echo $time; ?></td>
+            </tr>
+            <?php } ?>
+        </tbody>
+    </table>
+</div>
